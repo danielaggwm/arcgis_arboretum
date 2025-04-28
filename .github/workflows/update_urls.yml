@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run update_layers.py
+      - name: Run Scripts/update_layers.py
         env:
           AGO_ORG_URL: ${{ secrets.AGO_ORG_URL }}
           AGO_USERNAME: ${{ secrets.AGO_USERNAME }}
