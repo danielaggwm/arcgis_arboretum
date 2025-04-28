@@ -1,6 +1,7 @@
 name: Update Layers on Data Change
 
 on:
+  workflow_dispatch: 
   push:
     paths:
       - 'TMS_Data/**'
