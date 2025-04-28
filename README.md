@@ -3,6 +3,7 @@
 This repository automatically updates ArcGIS Online feature layers when new data is added or when data is modified. 
 
 **📂 Watched Folders**
+
 The GitHub Action monitors changes in the following folders:
 
 - TMS_Data/
