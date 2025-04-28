@@ -14,7 +14,7 @@ from arcgis.features import FeatureLayerCollection
 load_dotenv()
 
 # ─── STEP 0: regenerate your CSVs ───────────────────────────────────────────────
-subprocess.check_call(["python", "scripts/summary.py"])
+subprocess.check_call(["python", "Scripts/summary.py"])
 
 # ─── STEP 1: authenticate ───────────────────────────────────────────────────────
 gis = GIS(
