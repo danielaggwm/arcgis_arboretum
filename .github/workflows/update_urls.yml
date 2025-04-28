@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Scripts/update_layers.py
+      - name: Run update_layers.py
         env:
           AGO_ORG_URL: ${{ secrets.AGO_ORG_URL }}
           AGO_USERNAME: ${{ secrets.AGO_USERNAME }}
@@ -34,4 +34,4 @@ jobs:
           DENDRO_DAILY_ITEMID: ${{ secrets.DENDRO_DAILY_ITEMID }}
           TMS_AVG_ITEMID: ${{ secrets.TMS_AVG_ITEMID }}
         run: |
-          python update_layers.py
+          python Scripts/update_layers.py
