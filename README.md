@@ -50,6 +50,7 @@ The workflow uses the following GitHub Secrets:
 - DENDRO_AVG_ITEMID
 - DENDRO_DAILY_ITEMID
 - TMS_AVG_ITEMID
+- DBH_ITEMID
 
 These must be correctly configured for the script to successfully upload data.
 
