@@ -27,7 +27,8 @@ gis = GIS(
 layer_map = {
     "Dendrometer_Average.csv": os.environ["DENDRO_AVG_ITEMID"],
     "Dendrometer_Daily.csv":   os.environ["DENDRO_DAILY_ITEMID"],
-    "TMS_Average.csv":         os.environ["TMS_AVG_ITEMID"]
+    "TMS_Average.csv":         os.environ["TMS_AVG_ITEMID"],
+    "Dendrometer_DBH_Difference.csv":  os.environ["DBH_ITEMID"]
 }
 
 # ─── STEP 3: overwrite each layer ───────────────────────────────────────────────
