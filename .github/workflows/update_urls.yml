@@ -33,5 +33,6 @@ jobs:
           DENDRO_AVG_ITEMID: ${{ secrets.DENDRO_AVG_ITEMID }}
           DENDRO_DAILY_ITEMID: ${{ secrets.DENDRO_DAILY_ITEMID }}
           TMS_AVG_ITEMID: ${{ secrets.TMS_AVG_ITEMID }}
+          DBH_ITEMID: ${{ secrets.DBH_ITEMID }}
         run: |
           python Scripts/update_layers.py
