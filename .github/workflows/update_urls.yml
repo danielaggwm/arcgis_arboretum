@@ -1,11 +1,13 @@
 name: Update Layers on Data Change
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   push:
     paths:
       - 'TMS_Data/**'
       - 'Dendrometer_Data/**'
+  repository_dispatch:
+    types: [run-update-layers]
 
 jobs:
   update:
@@ -27,12 +29,12 @@ jobs:
 
       - name: Run update_layers.py
         env:
-          AGO_ORG_URL: ${{ secrets.AGO_ORG_URL }}
-          AGO_USERNAME: ${{ secrets.AGO_USERNAME }}
-          AGO_PASSWORD: ${{ secrets.AGO_PASSWORD }}
-          DENDRO_AVG_ITEMID: ${{ secrets.DENDRO_AVG_ITEMID }}
+          AGO_ORG_URL:        ${{ secrets.AGO_ORG_URL }}
+          AGO_USERNAME:       ${{ secrets.AGO_USERNAME }}
+          AGO_PASSWORD:       ${{ secrets.AGO_PASSWORD }}
+          DENDRO_AVG_ITEMID:  ${{ secrets.DENDRO_AVG_ITEMID }}
           DENDRO_DAILY_ITEMID: ${{ secrets.DENDRO_DAILY_ITEMID }}
-          TMS_AVG_ITEMID: ${{ secrets.TMS_AVG_ITEMID }}
-          DBH_ITEMID: ${{ secrets.DBH_ITEMID }}
+          TMS_AVG_ITEMID:     ${{ secrets.TMS_AVG_ITEMID }}
+          DBH_ITEMID:         ${{ secrets.DBH_ITEMID }}
         run: |
           python Scripts/update_layers.py
