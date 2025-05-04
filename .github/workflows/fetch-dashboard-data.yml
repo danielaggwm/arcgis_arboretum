@@ -1,6 +1,7 @@
-name: Fetch Arboretum Dashboard Data
+name: Fetch Dashboard Data
 
 on:
+  workflow_dispatch:           # ← allows manual runs
   repository_dispatch:
     types: [dashboard-data-updated]
 
